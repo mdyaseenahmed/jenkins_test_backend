@@ -5,9 +5,9 @@ const routes = require('./routes')
 app.use(express.json())
 app.use(cors())
 app.use('/api', routes)
-
-const server = app.listen(8000, () => {
-    // console.log("Server is Up & Running on 6000")
+const PORT = process.env.PORT || 3001
+const server = app.listen(PORT, () => {
+    console.log("Server is Up & Running on "+PORT)
 })
 
 module.exports = server;
